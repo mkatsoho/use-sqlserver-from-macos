@@ -40,3 +40,15 @@ cd /work
 # Source envs for remote/local DB and run scripts
 
 
+# Reference
+
+## Commands in sqlcmd
+
+'''
+:help
+:quit
+'''
+
+## T-SQL Examples
+
+
