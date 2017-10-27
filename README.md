@@ -11,44 +11,71 @@ Hate to use SSMS (GUI Client) of SQL Server, and try to run a command line on Ma
 
 - Do not like SSMS GUI, and prefer command line and scripts (can reuse scripts)
 - Using MacOS, rather than Windows (My new i5 windows notebook is quit slow running huge SSMS)
-- As a Oracle DBA, I can not find the right command in sqlcmd, such as 'describe table_x'
+- As a Oracle DBA, I can not find the right command in sqlcmd, such as `describe table_x`
 
 
 # Have a SQL Server Client on MacOS
 
-No offical SQL Server Client for MacOS (as 2017/10/01). An alternative choice is some payed GUI client by third party, which you can search in Mac App Store.
+_**NO offical SQL Server Client is availabe for MacOS (as 2017/10/01)**_. An alternative choice is some payed GUI client by third party, which you can search in Mac App Store.
 
-Many thanks to Docker. There is using a [SQL Server docker image](https://hub.docker.com/r/microsoft/mssql-server-linux/), which contain a DB Server and client.
+Many thanks to Docker. There is [SQL Server docker image](https://hub.docker.com/r/microsoft/mssql-server-linux/), which contains Sqlserver DB Server and Client.
 
-'''bash
+```bash
 docker pull microsoft/mssql-server-linux:2017-latest
-'''
+```
 
 
 # Run Sqlcmd in bash of the docker
 
 Run the client command line inner the docker. Either connect to a local Sqlserver DB or a remote one
 
-'''bash
+```bash
 run_docker.sh        # run a docker and use bash of the container 
 
 cd /work
 
 /opt/mssql-tools/bin/sqlcmd -?
-'''
+```
 
 # Source envs for remote/local DB and run scripts
+
+## desc.sh - show a table's fields
+
+## tab.sh - show a tables
+
+## export.sh - export a query's result as csv file with default field spliter "|"
+
+## import_via_insert.sh - use insert instead of bulk
+https://docs.microsoft.com/en-us/sql/t-sql/statements/bulk-insert-transact-sql
 
 
 # Reference
 
+## sqlcmd command line parameters
+
+```bash
+/opt/mssql-tools/bin/sqlcmd -?
+```
+
 ## Commands in sqlcmd
 
-'''
+```
 :help
 :quit
-'''
+```
 
 ## T-SQL Examples
+
+### select 
+
+### view
+
+### vars
+
+### try catch
+
+### with
+
+
 
 
