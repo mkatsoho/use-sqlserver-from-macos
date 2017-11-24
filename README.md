@@ -92,10 +92,13 @@ TODO
 
 TODO
 
-### clone a table
+### clone/empty a table
 
 ```
 select * into cloned_mytab from mytab;
+go
+
+truncate table mytab;
 go
 ```
 
@@ -105,7 +108,14 @@ TODO
 
 ### define/use a variable
 
-TODO
+```sql
+DECLARE @today DATE = CAST(SYSUTCDATETIME() AS DATE)                   -- today
+DECLARE @firstDay DATE = DATEADD(DAY, 1 - DATEPART(DAY, @today), @today)    -- 1st day of this month
+SET @firstDay = DATEADD(MONTH, -1, @firstDay)                          -- 1st day of last month
+PRINT @today
+PRINT @firstDay
+go
+```
 
 ### try, catch, and exception
 
