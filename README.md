@@ -60,6 +60,7 @@ https://docs.microsoft.com/en-us/sql/t-sql/statements/bulk-insert-transact-sql
 ## Commands in sqlcmd
 
 ```
+-- use help to know more
 :help
 :quit
 ```
@@ -68,8 +69,10 @@ https://docs.microsoft.com/en-us/sql/t-sql/statements/bulk-insert-transact-sql
 
 ### use/list a database
 
+```
 use mydb;
 go
+```
 
 TODO
 
@@ -91,8 +94,10 @@ TODO
 
 ### clone a table
 
+```
 select * into cloned_mytab from mytab;
 go
+```
 
 ### read/create/insert/delete/drop a view
 
