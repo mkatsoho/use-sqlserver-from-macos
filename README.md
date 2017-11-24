@@ -66,16 +66,46 @@ https://docs.microsoft.com/en-us/sql/t-sql/statements/bulk-insert-transact-sql
 
 ## T-SQL Examples
 
-### select 
+### use/list a database
 
-### view
+use mydb;
+go
 
-### vars
+TODO
 
-### try catch
+### backup/recover a database
+
+TODO
+
+### read/create/insert/delete/drop a table
+
+TODO
+
+### import/export a table
+
+TODO
+
+### list/describe tables/views
+
+TODO
+
+### clone a table
+
+select * into cloned_mytab from mytab;
+go
+
+### read/create/insert/delete/drop a view
+
+TODO
+
+### define/use a variable
+
+TODO
+
+### try, catch, and exception
+
+TODO
 
 ### with
 
-
-
-
+TODO
